@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Promise</title>
+    <script>
+        //Exemplo baseado em https://blog.matheuscastiglioni.com.br/trabalhando-com-promises-em-javascript/
+
+        function fazRequisicao(resolver = true) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (!resolver) {
+                        reject("Deu erro");
+                        //throw new Error("Deu erro"); //pode rejeitar a promise assim também
+                    }
+                    resolve("Promise resolvida");
+                }, 5000);
+            });
+        }
+
+        fazRequisicao(true)
+            .then(console.log)
+            .catch(console.error);
+
+        fazRequisicao(false)
+            .then(console.log, console.error); //sintaxe alternativa para não usar catch
+
+        //executando diversos trechos de códigos dentro do then ou do catch
+        fazRequisicao(true)
+            .then(resposta => {
+                console.log(resposta)
+                alert(resposta)
+            })
+            .catch(erro => {
+                console.error(erro)
+                alert(erro)
+            });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
