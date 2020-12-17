@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>Async/await</title>
+    <script>
+        //Exemplo baseado em https://javascript.info/async-await
+
+        async function f() { //The word “async” before a function means one simple thing: a function always returns a promise.
+            return 1;
+            //return Promise.resolve(1); //We could explicitly return a promise, which would be the same:
+        }
+
+        f().then(alert); // 1
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

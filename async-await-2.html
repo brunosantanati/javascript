@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Async/await</title>
+    <script>
+        //Exemplo baseado em https://javascript.info/async-await
+
+        async function f() {
+
+            let promise = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("done!"), 1000)
+            });
+
+            // works only inside async functions
+            let result = await promise; // wait until the promise resolves (*)
+
+            alert(result); // "done!"
+
+            //The function execution “pauses” at the line (*) and resumes when the promise settles, with result becoming its result. So the code above shows “done!” in one second.
+            //It’s just a more elegant syntax of getting the promise result than promise.then, easier to read and write.
+        
+        }
+
+        f();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
