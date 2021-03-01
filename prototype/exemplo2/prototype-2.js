@@ -10,7 +10,7 @@ function Animal() {
 
 // constructor function
 function Gato() {
-    Animal.call(this);
+    Animal.call(this); //herança
     this.nome = "Gato";
     this.nomeCientifico = "Felis catus";
     this.gostaDe = "Brincar com bolinha";
@@ -24,7 +24,7 @@ Animal.prototype.comer = function() {
     console.log('Comendo...');
 }
 
-Gato.prototype = Object.create(Animal.prototype);
+Gato.prototype = Object.create(Animal.prototype); //herança
 Gato.prototype.constructor = Gato;
 
 Gato.prototype.fazerBarulho = function() {
