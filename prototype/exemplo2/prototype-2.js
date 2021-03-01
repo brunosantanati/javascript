@@ -1,12 +1,14 @@
 // Exemplo baseado no link:
 // https://www.youtube.com/watch?v=CpmE5twq1h0&list=PLGemgmMsjljQWdy9-BQnMPQzrysRRpQ7E&index=4
 
+// constructor function
 function Animal() {
     this.nome = "Animal genérico";
     this.nomeCientifico = "Nome científico genérico";
     this.numeroPatas = 4;
 }
 
+// constructor function
 function Gato() {
     Animal.call(this);
     this.nome = "Gato";

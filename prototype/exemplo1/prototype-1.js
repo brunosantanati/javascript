@@ -1,6 +1,7 @@
 // Exemplo baseado nesse vídeo: 
 // https://www.youtube.com/watch?v=4jb4AYEyhRc&list=PLGemgmMsjljQWdy9-BQnMPQzrysRRpQ7E&index=2
 
+// object constructor function
 function User(email, name){
     this.email = email;
     this.name = name;
